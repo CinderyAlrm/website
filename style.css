@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, rgb(243, 73, 101), rgb(235, 112, 132),rgb(224, 204, 207) , rgb(235, 136, 153) );
+    /*background-color: rgb(255, 190, 205) ;
+    */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+
+.BIGahhtitle > #frontmessage{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    white-space: nowrap;
+    min-height: 25vh;
+    width: 100%;
+    animation: bounce 2s infinite;
+      
+    font-size: 120px;
+    
+    
+}
+
+
+    
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(40px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.yap {display: inline-block;}
+.text {
+    width: 100%;
+    overflow: hidden;
+    
+    white-space: nowrap;
+    border-right:5px solid rgb(0, 0, 0);
+    animation: 
+    typing 2s steps(50),
+    blink .4s step-end infinite alternate ;
+}
+
+@keyframes typing {
+        from { width: 0;}
+}
+
+ @keyframes blink {
+        50% {border-color: transparent}
+
+ }
+header {
+    width: 95%;
+    max-width: 788px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    margin-top: 15px;
+    
+}
+#BEGGING {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(220, 20, 60);
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+#Imfetty {
+    display: none;
+    width: 100px;
+    height:auto;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* this just makes the uhhhhh text be displayed in colums and such */
+.container {
+    width: 90%;
+    max-width: 680px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* experimenting*/ /*ok so it worked its just fading the picture as you scroll */
+
+.container > .image-container{
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 100px;
+    animation-range-end: contain;
+}
+
+
+
+
+@keyframes fade-in {
+    from {scale: .8; opacity: .5;}
+    to {scale:1; opacity: 1;}
+}
+
+@keyframes fade-out {
+    to {opacity: 0;}
+}
+
+
+
+/*delete this if it doesnt work dude*/
+
+a {
+    text-decoration: none;
+    color:rgb(255, 237, 209)
+}
+.tile {
+    width: 100%;
+    
+    background-color: crimson;
+    margin: 7px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.tile-share-button {
+    margin: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(243, 115, 115);
+}
+.tile:hover {
+    transition: cubic-bezier(.07, 1.41, .82, 1.41) 0.2s;
+    transform: scale(1.02);
+}
+#BEGGING:hover {
+    transition: cubic-bezier(.07, 1.41, .82, 1.41) 0.4s;
+    transform: scale(1.50);
+}
+
+
+.image-container {
+    height: auto;
+    width: auto;
+    border-radius: 48px;
+    overflow: hidden;
+}
+.image-container img {
+    height: 100%;
+}
+
+
+.icon {
+    margin: 8px 8px;
+    width: 44px;
+    height: 44px;
+}
+
+
+/*I get the gist of whats going on here but for some reason  i fucked up the code while following the video (HOW THE FUCK DOES THAT HAPPEN)
+so i gave up and copy pasted and changed the variables to what i need it*/
+
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(images/model.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+
+
+
+
+
