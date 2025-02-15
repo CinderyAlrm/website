@@ -16,6 +16,11 @@ body {
 
 .BIGahhtitle > #frontmessage{
     display: grid;
+     color:#fff;
+    font-weight: bold;
+    -webkit-text-stroke: 4px rgb(252, 252, 252);
+    text-shadow:-6px -4px 0 red, 
+    1px -1px 0 red,  -1px 2px 0 red,1px 2px 0 red;
     place-items: center;
     align-content: center;
     white-space: nowrap;
