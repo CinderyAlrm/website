@@ -25,7 +25,7 @@ BEGGING.addEventListener('click', function() {
         Imfetty.style.display = 'block';
     } else {
         audio.pause();
-        BEGGING.textContent = '';
+        BEGGING.textContent = 'hehe';
         Imfetty.style.display = 'none';
     }
 });
