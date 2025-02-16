@@ -2,7 +2,8 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(circle, rgb(243, 73, 101), rgb(235, 112, 132),rgb(224, 204, 207) , rgb(235, 136, 153) );
-  
+    /*background-color: rgb(255, 190, 205) ;
+    */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -11,6 +12,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
 }
+
+/*delete if wrong */
 .BIGahhtitle {
     position: relative;
     text-align: center;
@@ -18,51 +21,57 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 40vh;
-
-
+}
+/* delete if wrong */
 
 .BIGahhtitle > #frontmessage{
     display: grid;
-     color:#fff;
+    color:#fff;
     font-weight: bold;
     -webkit-text-stroke: 4px rgb(252, 252, 252);
     text-shadow:-6px -4px 0 red, 
     1px -1px 0 red,  -1px 2px 0 red,1px 2px 0 red;
+
     place-items: center;
     align-content: center;
     white-space: nowrap;
+    display: flex;
     min-height: 40vh;
     width: 100%;
     animation: bounce 2s infinite;
       
-    font-size: 70px;
+    font-size: 70px
     
     
 }
+
+/*delete if wrong */
+
+
 
 .hearts {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%); /* Vertically center the hearts */
     display: flex;
-    gap: 10px; 
+    gap: 10px; /* Space between hearts */
 }
 
-
+/* Hearts on the left */
 .left-hearts {
-    left: -80px; 
+    left: -80px; /* Adjust this value to position the hearts further left */
 }
 
-
+/* Hearts on the right */
 .right-hearts {
-    right: -80px;
+    right: -80px; /* Adjust this value to position the hearts further right */
 }
 
-
+/* Individual heart styles */
 .heart {
-    width: 60px;
-    height: 60px; 
-    animation: float 3s infinite ease-in-out; 
+    width: 60px; /* Adjust the size of the hearts */
+    height: 60px; /* Adjust the size of the hearts */
+    animation: float 3s infinite ease-in-out; /* Floating animation */
     animation: bounce 2s infinite
 }
 
@@ -71,9 +80,15 @@ body {
 
 
 
-    
 
-    
+
+
+
+
+
+
+
+/*delete if wrong */
 
 
 @keyframes bounce {
@@ -146,6 +161,8 @@ header {
 /* experimenting*/ /*ok so it worked its just fading the picture as you scroll */
 
 .container > .image-container{
+
+   
     animation: fade-in linear;
     animation-timeline: view();
     animation-range-start: 100px;
@@ -215,6 +232,8 @@ a {
     width: 44px;
     height: 44px;
 }
+
+
 
 
 /*I get the gist of whats going on here but for some reason  i fucked up the code while following the video (HOW THE FUCK DOES THAT HAPPEN)
