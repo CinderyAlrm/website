@@ -2,8 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(circle, rgb(243, 73, 101), rgb(235, 112, 132),rgb(224, 204, 207) , rgb(235, 136, 153) );
-    /*background-color: rgb(255, 190, 205) ;
-    */
+  
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -12,6 +11,14 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
 }
+.BIGahhtitle {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+
 
 
 .BIGahhtitle > #frontmessage{
@@ -24,7 +31,7 @@ body {
     place-items: center;
     align-content: center;
     white-space: nowrap;
-    min-height: 25vh;
+    min-height: 40vh;
     width: 100%;
     animation: bounce 2s infinite;
       
@@ -33,6 +40,38 @@ body {
     
 }
 
+.hearts {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    display: flex;
+    gap: 10px; 
+}
+
+
+.left-hearts {
+    left: -80px; 
+}
+
+
+.right-hearts {
+    right: -80px;
+}
+
+
+.heart {
+    width: 60px;
+    height: 60px; 
+    animation: float 3s infinite ease-in-out; 
+    animation: bounce 2s infinite
+}
+
+
+
+
+
+
+    
 
     
 
